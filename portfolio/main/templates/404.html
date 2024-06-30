@@ -2,16 +2,61 @@
 {% load static %}
 
 {% block title %}
-Home
+404 error
 {% endblock title %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/404.css' %}">
+<style>
+    * {
+        overflow: hidden;
+    }
+
+    #error, #error p, #error h1, .back {
+    background-image: none;
+    }
+
+    #error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    #error h1 {
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .back {
+        margin-top: 20px;
+        padding: 20px;
+        cursor: pointer;
+        border: 3px solid rgb(254, 255, 254);
+    }
+
+    .back:hover {
+        background-image: linear-gradient(180deg, rgb(252,235,227),rgb(254, 255, 254));
+        color: black;
+    }
+
+    #contacts {
+        opacity: 0;
+    }
+</style>
 {% endblock extrahead %}
 
 {% block content %}
-<h1>Oops. It looks like we got lost.</h1>
+<div id="error">
+    <h1>Oops. It looks like we got lost. (｡>﹏<)</h1>
+    <p>Sorry, but we couldn't find the page you're looking for.</p>
+    <a class="back" href="/home">Go back Home</a>
+</div>
 {% endblock content %}
 
 {% block extra_js %}
-<!-- <script src="{% static 'js/home.js' %}"></script> -->
 {% endblock extra_js %}

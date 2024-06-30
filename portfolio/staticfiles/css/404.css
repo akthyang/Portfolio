@@ -1,0 +1,9 @@
+#404 h1, #404 p, #404 .back {
+    background-image: none;
+}
+
+#404 {
+    height: 100vh;
+    overflow: hidden;
+}
+

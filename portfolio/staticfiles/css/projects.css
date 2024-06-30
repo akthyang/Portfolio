@@ -1,0 +1,104 @@
+.filters, #keyword, .tags-list, .tag, .codingprojects,
+.project, .project h2, .project a, .project p, #noMatch,
+#noMatch h2, #noMatch px {
+    background-image: none;
+}
+
+.codingprojects {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+/* Filters section */
+.filters {
+    margin-bottom: 20px;
+    background-image: none;
+  }
+  
+  #keyword {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 3px solid rgb(254, 255, 254);
+    background-color: transparent;
+    border-radius: 5px;
+    color: rgb(254, 255, 254);
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  #keyword::placeholder {
+    color: rgb(254, 255, 254);
+  }
+  
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    border: 3px solid rgb(254, 255, 254);
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+  }
+  
+  .tag:hover {
+    background-image: linear-gradient(350deg,  rgb(252,235,227), rgb(137,223,222), rgb(154,193,225));
+  }
+  
+  /* Projects list */
+  .project, #noMatch {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 4px solid rgb(254, 255, 254);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  #ptitle {
+    font-size: 35px;
+  }
+
+  .project a {
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+
+  .project:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .project p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  #noMatch {
+    display: none;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .tags-list {
+      flex-direction: column;
+    }
+  }

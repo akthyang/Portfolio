@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+500 error
+{% endblock title %}
+{% block extrahead %}
+<style>
+    * {
+        overflow: hidden;
+    }
+
+    #error, #error p, #error h1, .back {
+    background-image: none;
+    }
+
+    #error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    #error h1 {
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3em;
+        margin: 0;
+    }
+
+    #contacts {
+        opacity: 0;
+    }
+</style>
+{% endblock extrahead %}
+
+{% block content %}
+<div id="error">
+    <h1>Oops! Something Went Wrong (╥﹏╥)</h1>
+    <p>We're experiencing technical difficulties. Please try again later.</p>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+{% endblock extra_js %}
