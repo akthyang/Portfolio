@@ -1,7 +1,7 @@
 # Portfolio
 A sample portfolio website was created with Python and Django and deployed on Railway.
 
-**Please note there are not a lot of projects available in this project and there is an error where media files are not loading when this app is deployed. I am already looking into this issue. Thank you.**
+**Please note there are not a lot of projects available in this project itself. In addition, I am aware there is an error where media files are not loading when this app is being deployed, and am looking into it. Thank you.**
 
 ## Overview
 
