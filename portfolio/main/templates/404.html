@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/404.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+<h1>Oops. It looks like we got lost.</h1>
+{% endblock content %}
+
+{% block extra_js %}
+<!-- <script src="{% static 'js/home.js' %}"></script> -->
+{% endblock extra_js %}

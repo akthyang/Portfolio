@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+All Projects
+{% endblock title %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="filters">
+        <input type="text" id="keyword" placeholder="Search for...">
+        <div class="tags-list">
+            {% for tag in tags %}
+                <button class="tag" data-tag="{{ tag.name | lower }}"> 
+                    {{ tag.name }} 
+                </button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="codingprojects">
+        {% for project in projects %}
+            <div class="project" data-name="{{ project.title | lower }}" 
+            data-description="{{ project.description | lower }}" data-tags="{{ project.tags.all | join:', ' | lower }}">
+                <h2>
+                    <a id = "ptitle" href="{% url 'project' project.id %}">
+                        {{ project.title }}
+                    </a>
+                </h2>
+                <a href="{% url 'project' project.id %}">
+                    <p> {{ project.description }} </p>
+                </a>
+                <a href="{% url 'project' project.id %}">
+                    <p> Tags: {{ project.tags.all | join:', ' }}</p>
+                </a>
+            </div>
+        {% endfor %}
+        <div id="noMatch">
+            <h2>Sorry, there was no match for this</h2>
+            <p>Although there was nothing found, you're welcome to leave a message and we'll get back to you with the relevant info. Thanks! (˶˃ ᵕ ˂˶) </p>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block extra_js %}
+<script src="{% static 'js/projects.js' %}"></script>
+{% endblock extra_js %}
