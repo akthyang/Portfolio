@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'portfolio-akth.up.railway.app/']
 
+CSRF_TRUSTED_ORIGINS = ['https://portfolio-akth.up.railway.app/']
 
 # Application definition
 
